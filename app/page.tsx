@@ -8,34 +8,17 @@ import InsuranceProducts from "@/components/InsuranceProducts";
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen"
-      style={{ backgroundColor: "#0d1117" }}
-    >
+    <div className="min-h-screen" style={{ backgroundColor: "#0d1117" }}>
       <Sidebar />
       <Topbar />
-
-      {/* Main content */}
-      <main
-        style={{
-          marginLeft: "200px",
-          paddingTop: "56px",
-          minHeight: "100vh",
-        }}
-      >
+      <main style={{ marginLeft: "200px", paddingTop: "56px", minHeight: "100vh" }}>
         <div className="px-6 py-5">
           <TabNav />
           <StatCards />
-
-          {/* Middle row: policies table + chart */}
-          <div
-            className="grid gap-4 mb-0"
-            style={{ gridTemplateColumns: "1fr 280px" }}
-          >
+          <div className="grid gap-4" style={{ gridTemplateColumns: "1fr 280px" }}>
             <ActivePolicies />
             <PremiumChart />
           </div>
-
           <InsuranceProducts />
         </div>
       </main>
